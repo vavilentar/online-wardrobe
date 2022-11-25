@@ -202,8 +202,11 @@ button:hover {
 	width: 100px;
 }
 
-#counters {
+#header {
 	margin: 10px 0;
+	display: flex;
+	align-items:center;
+	justify-content: space-between;
 }
 
 @media (max-width: 426px) {
