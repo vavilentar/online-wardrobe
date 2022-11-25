@@ -170,3 +170,9 @@ button:hover {
 #counters {
 	margin: 10px 0;
 }
+
+@media (max-width: 426px) {
+	.content_wrapper {
+		flex-direction: column;
+	}
+}
