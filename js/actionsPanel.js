@@ -22,7 +22,12 @@ function useCloth(id) {
 		clothCollection.get(id).useDate = clothCollection.get(id).use();
 		const lastUsedItem = document.getElementById(`lastUsed-${id}`);
 		lastUsedItem.innerHTML = `Last used: <b>${clothCollection.get(id).useDate}</b>`;
-		useClothBtn.innerHTML = `✔`;
+		useClothBtn.innerHTML = `Date updated ✔`;
+		useClothBtn.style = "color: green;"
+		setTimeout(() => {
+			useClothBtn.innerHTML = `Put on`;
+			useClothBtn.style = "color: black;"
+		}, 1000)
 	})
 
 	return useClothBtn;
