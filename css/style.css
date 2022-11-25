@@ -1,0 +1,172 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,600,700);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@keyframes newCloth {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+body {
+	background: linear-gradient(to right, #acb6e5, #86befd);
+}
+
+.content_wrapper {
+	font-family: 'Open Sans';
+	display: flex;
+}
+
+button {
+	font-family: 'Open Sans';
+	cursor: pointer;
+	height: 32px;
+	padding: 0 20px;
+	margin: 4px 0;
+	border-radius: 5px;
+	border: none;
+	background-color: rgb(87, 94, 199);
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0px 0px 2px white inset;
+	color: white;
+	font-weight: 400;
+	transition: background-color .3s ease, box-shadow .2s ease;
+}
+
+button::after {
+	position: absolute;
+	width: 100%;
+	height: 0;
+	background: linear-gradient(to top, #297fb900, #6dd4fa, #ffffff);
+	opacity: 0.5;
+	top: 0;
+	right: 0;
+	content: '';
+	transition: all .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+button:hover::after {
+	height: 100%;
+}
+
+button:hover {
+	box-shadow: 0px 2px 4px black;
+}
+
+.delete-cloth_btn:after {
+	background: linear-gradient(to top, #297fb900, #fa6d6d, #ffffff);
+}
+
+.delete-cloth_btn:hover {
+	background-color: red;
+}
+
+.cloth-tab {
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+	width: fit-content;
+	padding: 15px;
+	margin: 10px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	background-color: white;
+}
+
+.cloth-tab .cloth-tab_photo {
+	position: absolute;
+	height: 100%;
+	z-index: -1;
+	top: 0;
+}
+
+.cloth-tab p {
+	font-weight: 400;
+	display: flex;
+	font-size: 14px;
+}
+
+#clothDescr {
+	margin: 10px 0 5px 0;
+	font-size: 14px;
+}
+
+#clothDescr b{
+	margin: 0 5px;
+}
+
+#cloth-collection_wardrobe {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#new-cloth_form {
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+	padding: 15px;
+	border: .5px solid rgb(87, 94, 199);
+	box-shadow: 0px 0px 4px rgb(87, 94, 199) inset;
+	background-color: #acb6e5;
+	border-radius: 5px;
+}
+
+#new-cloth_form input {
+	font-family: 'Open Sans';
+	height: 28px;
+	padding: 0 10px;
+	margin: 4px 0;
+	border-radius: 5px;
+	border: none;
+	border: .5px solid rgb(87, 94, 199);
+	box-shadow: 0px 0px 4px rgb(87, 94, 199) inset;
+}
+
+.cloth-actions {
+	width: fit-content;
+	margin: 5px 0 10px 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.cloth-actions img {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	transition: filter .2s ease;
+}
+
+.cloth-actions img:hover{
+	filter: drop-shadow(0px 0px 2px red);
+}
+
+.cloth-actions select {
+	margin: 0 10px;
+}
+
+.cloth-actions a {
+	text-decoration: none;
+	color: black;
+	padding: 2px 0;
+	width: fit-content;
+}
+
+.cloth-show {
+	animation: newCloth .3s ease;
+}
+
+#logotype {
+	width: 100px;
+}
+
+#counters {
+	margin: 10px 0;
+}

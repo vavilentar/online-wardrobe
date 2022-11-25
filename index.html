@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/style.css">
+	<title>Wardrobe</title>
+</head>
+<body>
+<div class="content_wrapper">
+		<div id="new-cloth_form">
+			<img id="logotype" src="./icon/closet.png" alt="">
+<div id="counters">
+				<div id="cloth-collection_counter">Collection: 0</div>
+				<div id="fav-collection_counter">Favourite: 0</div>
+</div>
+			<input value="Puma" class="new-cloth_input" placeholder="Brand" type="text">
+			<input value="T-Shirt" class="new-cloth_input" placeholder="Type" type="text">
+			<input value="Red" class="new-cloth_input" placeholder="Color" type="text">
+			<input value="Summer" class="new-cloth_input" placeholder="Season" type="text">
+			<button id="new-cloth_btn">Add Element</button>
+			<button id="my-collection_btn">My Collection</button>
+			<button id="favourite-list_btn">My Favourite</button>
+		</div>
+		<div id="cloth-collection">
+			<div id="cloth-collection_wardrobe"></div>
+		</div>
+</div>
+
+	<script src="./js/clothClass.js"></script>
+	<script src="./js/clothCollections.js"></script>
+	<script src="./js/actionsPanel.js"></script>
+	<script src="./js/wardrobe.js"></script>
+</body>
+</html>
