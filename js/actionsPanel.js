@@ -6,6 +6,7 @@ function clothActionsTab(id) {
 	actionsTab.appendChild(likeBtn(id))
 	actionsTab.appendChild(collectionsList(id))
 	actionsTab.appendChild(useCloth(id))
+	actionsTab.appendChild(showPhotoBtn(id))
 	
 	return actionsTab;
 }
@@ -38,6 +39,7 @@ function useCloth(id) {
 function likeBtn(id) {
 	const likeBtn = document.createElement('a');
 	likeBtn.id = `likeBtn-${id}`;
+	likeBtn.className = 'like-btn_img'
 	likeBtn.href = `#`
 	likeBtn.innerHTML = `
 	<img src="./icon/fav.svg" alt="" />
@@ -75,4 +77,22 @@ const likedItemText = (id) => {
 	} else {
 		item.innerHTML = `<img src="./icon/fav.svg" alt="" />`
 	}
+}
+
+// Кнопка 'Photo'
+function showPhotoBtn(id) {
+	const photoBtn = document.createElement('a');
+	photoBtn.id = `photoBtn-${id}`;
+	photoBtn.className = 'photo-btn_img'
+	photoBtn.href = `#`
+	photoBtn.innerHTML = `
+	<img src="./icon/camera.png" alt="" />
+	`
+
+	photoBtn.addEventListener('click', (e) => {
+		const photo = document.getElementById(`clothPhoto-${id}`)
+		photo.classList.toggle('photo-show')
+	})
+
+	return photoBtn;
 }

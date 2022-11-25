@@ -21,4 +21,3 @@ class Cloth {
 		console.log(`Last use date - ${this.useDate}`);
 	};
 };
-

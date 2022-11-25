@@ -15,3 +15,23 @@ function collectionsList(id) {
 	`
 	return list;
 }
+
+// Тестовая функция заполнения коллекции данными
+
+// function fillTemporary() {
+// 	for (let i = 0; i < 10; i++) {
+// 		let cloth = new Cloth(i,'Puma','T-Shirt','Green','Summer','Never',false)
+// 		clothCollection.set(i,cloth);
+// 	}
+// }
+
+// function fillFavourite() {
+// 	for (let i = 0; i < 5; i++) {
+// 		let cloth = new Cloth(i,'Puma','T-Shirt','Green','Summer','Never',true)
+// 		favouritelist.set(i,cloth);
+// 	}
+// }
+
+// fillTemporary()
+// fillFavourite()
+
