@@ -90,6 +90,7 @@ function showPhotoBtn(id) {
 	`
 
 	photoBtn.addEventListener('click', (e) => {
+		e.preventDefault()
 		const photo = document.getElementById(`clothPhoto-${id}`)
 		photo.classList.toggle('photo-show')
 	})
