@@ -199,7 +199,7 @@ button:hover {
 }
 
 #logotype {
-	width: 100px;
+	width: 50px;
 }
 
 #header {
@@ -221,7 +221,7 @@ button:hover {
 		align-items: center;
 	}
 	#new-cloth_form {
-	width: calc(100% - 30px);
+	width: fit-content;
 	}
 	#cloth-collection_wardrobe {
 		justify-content: center;
@@ -234,4 +234,3 @@ button:hover {
 		animation: none;
 		top: 0;
 	}
-}
