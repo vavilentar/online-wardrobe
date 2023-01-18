@@ -4,7 +4,7 @@ function clothActionsTab(id) {
     const actionsTab = document.createElement('div');
     actionsTab.className = 'cloth-actions';
     actionsTab.id = `actionsTab-${id}`;
-    actionsTab.appendChild(likeBtn(id));
+    actionsTab.appendChild(likeButton(id));
     actionsTab.appendChild(collectionsList(id));
     actionsTab.appendChild(useCloth(id));
     return actionsTab;
@@ -25,7 +25,7 @@ function useCloth(id) {
     return useClothBtn;
 }
 // Кнопка 'Like
-function likeBtn(id) {
+function likeButton(id) {
     const likeBtn = document.createElement('a');
     likeBtn.id = `likeBtn-${id}`;
     likeBtn.href = `#`;
