@@ -1,6 +1,7 @@
 "use strict";
 // Панель управления предмета
 function clothActionsTab(id) {
+
     const actionsTab = document.createElement('div');
     actionsTab.className = 'cloth-actions';
     actionsTab.id = `actionsTab-${id}`;
@@ -10,6 +11,7 @@ function clothActionsTab(id) {
     return actionsTab;
 }
 // Функция "Использовать предмет"
+
 function useCloth(id) {
     const useClothBtn = document.createElement('a');
     useClothBtn.id = `useClothBtn-${id}`;
