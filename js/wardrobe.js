@@ -1,67 +1,67 @@
 "use strict";
 
-let database = [
-	{
-		id : 1,
-		photo: './storage/photos/1.jpg',
-		brand : 'Бренд',
-		type : 'Кофта',
-		color : 'Зеленая',
-		season : 'Осень/весна',
-		useDate : 'Никогда',
-		liked : false,
-	},
-	{
-		id : 2,
-		photo: './storage/photos/2.jpg',
-		brand : 'Бренд',
-		type : 'Платье',
-		color : 'Коричневое',
-		season : 'Лето',
-		useDate : 'Никогда',
-		liked : false,
-	},
-	{
-		id : 3,
-		photo: './storage/photos/3.jpg',
-		brand : 'Бренд',
-		type : 'Платье',
-		color : 'Синее',
-		season : 'Лето',
-		useDate : 'Никогда',
-		liked : false,
-	},
-	{
-		id : 4,
-		photo: './storage/photos/4.jpg',
-		brand : 'Бренд',
-		type : 'Футболка',
-		color : 'Белая',
-		season : 'Лето',
-		useDate : 'Никогда',
-		liked : false,
-	},
-	{
-		id : 5,
-		photo: './storage/photos/5.jpg',
-		brand : 'Бренд',
-		type : 'Рубашка',
-		color : 'Фиолетовая',
-		season : 'Лето',
-		useDate : 'Никогда',
-		liked : false,
-	},
-	{
-		id : 6,
-		photo: './storage/photos/6.jpg',
-		brand : 'Бренд',
-		type : 'Рубашка',
-		color : 'Фиолетовая',
-		season : 'Лето',
-		useDate : 'Никогда',
-		liked : false,
-	},
-]
+// let database = [
+// 	{
+// 		id : 1,
+// 		photo: './storage/photos/1.jpg',
+// 		brand : 'Бренд',
+// 		type : 'Кофта',
+// 		color : 'Зеленая',
+// 		season : 'Осень/весна',
+// 		useDate : 'Никогда',
+// 		liked : false,
+// 	},
+// 	{
+// 		id : 2,
+// 		photo: './storage/photos/2.jpg',
+// 		brand : 'Бренд',
+// 		type : 'Платье',
+// 		color : 'Коричневое',
+// 		season : 'Лето',
+// 		useDate : 'Никогда',
+// 		liked : false,
+// 	},
+// 	{
+// 		id : 3,
+// 		photo: './storage/photos/3.jpg',
+// 		brand : 'Бренд',
+// 		type : 'Платье',
+// 		color : 'Синее',
+// 		season : 'Лето',
+// 		useDate : 'Никогда',
+// 		liked : false,
+// 	},
+// 	{
+// 		id : 4,
+// 		photo: './storage/photos/4.jpg',
+// 		brand : 'Бренд',
+// 		type : 'Футболка',
+// 		color : 'Белая',
+// 		season : 'Лето',
+// 		useDate : 'Никогда',
+// 		liked : false,
+// 	},
+// 	{
+// 		id : 5,
+// 		photo: './storage/photos/5.jpg',
+// 		brand : 'Бренд',
+// 		type : 'Рубашка',
+// 		color : 'Фиолетовая',
+// 		season : 'Лето',
+// 		useDate : 'Никогда',
+// 		liked : false,
+// 	},
+// 	{
+// 		id : 6,
+// 		photo: './storage/photos/6.jpg',
+// 		brand : 'Бренд',
+// 		type : 'Рубашка',
+// 		color : 'Фиолетовая',
+// 		season : 'Лето',
+// 		useDate : 'Никогда',
+// 		liked : false,
+// 	},
+// ]
 
 
 const newClothInputs = document.querySelectorAll('.new-cloth_input');
@@ -96,32 +96,32 @@ function createElement(brand, type, color, season, useDate) {
     clothCollectionWardrobe.appendChild(clothTab);
 }
 
-function loadCollection() {
-    for(let i = 0; i < database.length; i++) {
-        const clothTab = document.createElement('div');
-        clothTab.classList.add('cloth-tab', 'cloth-show');
-        clothTab.id = `clothItem-${database[i].id}`;
-        clothTab.innerHTML = `
-        <div>
-        <img class="cloth-img" src="${database[i].photo}" alt="" />
-        </div>
-        <div>
-        <h2>${database[i].brand}</h2>
-        <h3>${database[i].type}</h3>
-        <div id="clothDescr">
-        <p>Color: <b>${database[i].color}</b></p>
-        <p>Season: <b>${database[i].season}</b></p>
-        <p id="lastUsed-${database[i].id}">Last used: <b>${database[i].useDate}</b></p>
-        </div>
-        </div>
+// function loadCollection() {
+//     for(let i = 0; i < database.length; i++) {
+//         const clothTab = document.createElement('div');
+//         clothTab.classList.add('cloth-tab', 'cloth-show');
+//         clothTab.id = `clothItem-${database[i].id}`;
+//         clothTab.innerHTML = `
+//         <div>
+//         <img class="cloth-img" src="${database[i].photo}" alt="" />
+//         </div>
+//         <div>
+//         <h2>${database[i].brand}</h2>
+//         <h3>${database[i].type}</h3>
+//         <div id="clothDescr">
+//         <p>Color: <b>${database[i].color}</b></p>
+//         <p>Season: <b>${database[i].season}</b></p>
+//         <p id="lastUsed-${database[i].id}">Last used: <b>${database[i].useDate}</b></p>
+//         </div>
+//         </div>
 
-        `;
-        clothTab.appendChild(clothActionsTab(idCloth));
-        clothTab.appendChild(moveButton(idCloth));
-        clothTab.appendChild(deleteButton());
-        clothCollectionWardrobe.appendChild(clothTab);  
-    }
-}
+//         `;
+//         clothTab.appendChild(clothActionsTab(idCloth));
+//         clothTab.appendChild(moveButton(idCloth));
+//         clothTab.appendChild(deleteButton());
+//         clothCollectionWardrobe.appendChild(clothTab);  
+//     }
+// }
 
 // Кнопка удаления предмета
 function deleteButton() {
@@ -158,4 +158,4 @@ const moveItem = (list, id) => {
 };
 //# sourceMappingURL=wardrobe.js.map
 
-loadCollection() 
+// loadCollection() 
